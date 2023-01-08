@@ -41,19 +41,19 @@ public class aprok_error_iterasi {
 			System.out.println("Ea (%):	"+err_aprok);
 			System.out.println("==================");
 			System.out.println("Faktor: "+faktor);
-
-      // Iterasi Faktorial dengan FOR
+			
+			// Iterasi Faktorial dengan FOR
 			for(double i=0;i<faktor;i++) {
 				//Mendapatkan angka perkalian untuk faktorial
 				double temp=faktor-i;
 				//Penghitungan faktorial
 				faktorial=faktorial*temp;
 		  }
-
+			
 			// Mencari Hasil
-		  hasil2 = hasil+(Math.pow(e, iterasi))/faktorial;
-
-		  // Mencari Error Relative Persen (Et)
+			hasil2 = hasil+(Math.pow(e, iterasi))/faktorial;
+			
+			// Mencari Error Relative Persen (Et)
 			err_persen = nilai_benar-hasil2;
 			err_persen = err_persen/nilai_benar;
 			err_persen = err_persen*100;
@@ -67,7 +67,7 @@ public class aprok_error_iterasi {
 			hasil = hasil2;
 
 			// Penambahan untuk Iterasi
-      faktor++;
+			faktor++;
 			iterasi++;
 
 		}  while (err_aprok > Es); // Syarat, berjalan bila Ea > Es dan berhenti bila Ea < Es
@@ -80,6 +80,6 @@ public class aprok_error_iterasi {
 		System.out.println("==================");
 
 		// Kesimpulan
-    System.out.println("Pada iterasi ke-"+iterasi+" diperoleh hasil "+hasil+" dengan error aproksimasi "+err_aprok+" (Kurang dari "+Es+" %)");
+		System.out.println("Pada iterasi ke-"+iterasi+" diperoleh hasil "+hasil+" dengan error aproksimasi "+err_aprok+" (Kurang dari "+Es+" %)");
 	}
 }
